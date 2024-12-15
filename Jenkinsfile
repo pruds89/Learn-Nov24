@@ -10,7 +10,7 @@ pipeline {
 			branch "test*"
 			}
 			steps {
-				sh "cat local.txt" 
+				sh "cat local.txt"  
 			}
 	}
 }
