@@ -1,9 +1,10 @@
 pipeline {
 	agent any
 	stages {
-		state('Hello')
+		state('Hello') {
 			steps {
 				echo "Hello from Main Banch"
 			}
+		}
 	}
 }
