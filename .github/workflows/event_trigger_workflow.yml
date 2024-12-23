@@ -13,11 +13,12 @@ on:
 env:
   owner_name: Prudhvi
   owner_full_name: ${{ vars.REPO_OWNER }}
+  my_secret_var_value: ${{ secrets.MY_SECRET }}
 jobs:
   reuse_job: 
     uses: ./.github/workflows/reuse_job.yml
   main_job:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo " Hello, this job is triggered by $owner_name and his full name is $owner_full_name" 
+      - run: echo " Hello, this job is triggered by $owner_name and his full name is $owner_full_name and my secret is $my_secret_var_value" 
   
