@@ -11,9 +11,10 @@ on:
       - main 
 env:
   owner_name: Prudhvi
+  owner_full_name: ${{ REPO_OWNER }}
 jobs:
   main_job:
     runs-on: ubuntu-latest
     steps: 
-      - run: echo " Hello, this job is triggered by $owner_name " 
+      - run: echo " Hello, this job is triggered by $owner_name and his full name is $owner_full_name" 
   
