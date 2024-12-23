@@ -1,0 +1,20 @@
+name: Checking the conditional trigger 
+on: 
+  push: 
+    branches:
+      - main
+      - test*
+jobs:
+  main_job:
+    if: startswith(github.ref, 'refs/heads/main')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo" Running on the Main Branch" 
+
+  demo_job:
+    if: startswith(github.ref, 'refs/heads/test*')
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running on test branch" 
+  
+    
