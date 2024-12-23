@@ -3,7 +3,7 @@ on:
   push: 
     branches:
       - main
-      - test*
+      - test-new
 jobs:
   main_job:
     if: startswith(github.ref, 'refs/heads/main')
