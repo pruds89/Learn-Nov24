@@ -1,0 +1,19 @@
+name: Event triggered this workflow
+on:
+  push: 
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  fork:
+    branches:    
+      - main 
+env:
+  owner_name: Prudhvi
+jobs:
+  main_job:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: echo " Hello, this job is triggered by $owner_name " 
+  
