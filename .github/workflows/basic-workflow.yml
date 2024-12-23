@@ -5,9 +5,10 @@ on: [push]
 env:
 #  owner_name: Prudhvi 
   reason:  simply
+  owner_repo: ${{ vars.repp_owner }}
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Job basic_workflow is execution as part of the new workflow triggered by $repo_owner trigger reason is $reason"
+      - run: echo "Job basic_workflow is execution as part of the new workflow triggered by $owner_repo trigger reason is $reason"
 
