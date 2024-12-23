@@ -1,5 +1,5 @@
 name: Github actions demo
-run-name: Testing our basic Github actions workflow
+run-name: Testing github actions with variables
 
 on: [push]
 env:
