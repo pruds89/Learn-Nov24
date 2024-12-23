@@ -12,7 +12,7 @@ jobs:
       - run: echo " Running on the Main Branch" 
 
   demo_job:
-    if: startswith(github.ref, 'refs/heads/test*')
+    if: startswith(github.ref, 'refs/heads/test-new')
     runs-on: ubuntu-latest
     steps:
       - run: echo "Running on test branch" 
