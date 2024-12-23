@@ -1,4 +1,5 @@
 name: Event triggered this workflow
+run-name: Checking the workflow reusabilty
 on:
   push: 
     branches:
@@ -13,6 +14,8 @@ env:
   owner_name: Prudhvi
   owner_full_name: ${{ vars.REPO_OWNER }}
 jobs:
+  reuse_job: 
+    uses: ./.github/workflows/reuse_job.yml
   main_job:
     runs-on: ubuntu-latest
     steps: 
