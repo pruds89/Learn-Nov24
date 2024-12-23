@@ -5,7 +5,7 @@ on: [push]
 env:
 #  owner_name: Prudhvi 
   reason:  simply
-  owner_repo: ${{ vars.repp_owner }}
+  owner_repo: ${{ vars.repo_owner }}
 jobs:
   basic_workflow:
     runs-on: ubuntu-latest
