@@ -1,0 +1,8 @@
+name: This is a reusable job/workflow
+on: 
+  workflow_call
+jobs:
+  reuse_job1:
+    runs-on: ubuntu-latest
+    steps:  
+      - run: echo "Hello, This is a reusable template" 
